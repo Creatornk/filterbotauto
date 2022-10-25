@@ -895,7 +895,7 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("I couldn't find any movie in that name. If You Want Tis Movi e Request Us at - https://t.me/+BDvuprV0ctVkOTE1")
+        k = await msg.reply("I couldn't find any movie in that name. If You Want Tis Movi e Request Us at - https://t.me/nkmovierequistgroup")
         await asyncio.sleep(8)
         await k.delete()
         return
