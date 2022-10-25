@@ -171,7 +171,7 @@ async def give_filter(client,message):
 async def next_page(bot, query):
     ident, req, key, offset = query.data.split("_")
     if int(req) not in [query.from_user.id, 0]:
-        return await query.answer("oKda", show_alert=True)
+        return await query.answer("FUCK you again click another person result u want type again", show_alert=True)
     try:
         offset = int(offset)
     except:
@@ -226,16 +226,16 @@ async def next_page(bot, query):
                                   callback_data="pages")]
         )
         btn.append(
-            [InlineKeyboardButton("👉 How To Download 👈 ", url=f"hhttps://t.me/moviesss4ers/14")])
+            [InlineKeyboardButton("🤦‍♂️ HOW TO OPEN 🤦‍♀️ ", url=f"https://t.me/+Uu7lYe9oc5w1OWFl")])
         btn.append(
-            [InlineKeyboardButton('Ok Close it 🙂', callback_data='close_data')])
+            [InlineKeyboardButton('♻️ U GET UR MOVIE THAN CLOSE ♻️', callback_data='close_data')])
     elif off_set is None:
         btn.append(
             [InlineKeyboardButton(f"🗓 {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
              InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{req}_{key}_{n_offset}")])
         btn.append(
-            [InlineKeyboardButton("👉 How To Download 👈 ", url=f"https://t.me/moviesss4ers/14")])
-        btn.append([InlineKeyboardButton('Ok Close it 🙂', callback_data='close_data')])
+            [InlineKeyboardButton("🤦‍♂️ HOW TO OPEN 🤦‍♀️ ", url=f"https://t.me/+Uu7lYe9oc5w1OWFl")])
+        btn.append([InlineKeyboardButton('♻️ U GET UR MOVIE THAN CLOSE ♻️', callback_data='close_data')])
     else:
         btn.append(
             [
@@ -244,8 +244,8 @@ async def next_page(bot, query):
                 InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
         )
-        btn.append([InlineKeyboardButton("👉 How To Download 👈 ", url=f"https://t.me/moviesss4ers/14")])
-        btn.append([InlineKeyboardButton('Ok Close it 🙂', callback_data='close_data')])
+        btn.append([InlineKeyboardButton("🤦‍♂️ HOW TO OPEN 🤦‍♀️ ", url=f"https://t.me/+Uu7lYe9oc5w1OWFl")])
+        btn.append([InlineKeyboardButton('♻️ U GET UR MOVIE THAN CLOSE ♻️', callback_data='close_data')])
     try:
         await query.edit_message_reply_markup(
             reply_markup=InlineKeyboardMarkup(btn)
@@ -259,7 +259,7 @@ async def next_page(bot, query):
 async def advantage_spoll_choker(bot, query):
     _, user, movie_ = query.data.split('#')
     if int(user) != 0 and query.from_user.id != int(user):
-        return await query.answer("okDa", show_alert=True)
+        return await query.answer("FUCK you again click another person result u want type again ", show_alert=True)
     if movie_ == "close_spellcheck":
         return await query.message.delete()
     movies = SPELL_CHECK.get(query.message.reply_to_message.id)
@@ -274,7 +274,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('This Movie Not Found In DataBase If You Want This Movie Join Our Channel https://t.me/moviesss4ers')
+            k = await query.message.edit('This Movie Not Found In DataBase when it's  available admin will  upload  If You Want This Movie Join Our Channel https://t.me/NKBACKUPCHANNEL ')
             await asyncio.sleep(10)
             await k.delete()
 
@@ -545,7 +545,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('Channel 👀', url='https://t.me/moviesss4ers'),
+            InlineKeyboardButton('Channel 👀', url='https://t.me/NKBACKUPCHANNEL'),
             InlineKeyboardButton('Group 👀', url='https://t.me/moviei43')
         ], [
             InlineKeyboardButton('Help ⚡', callback_data='help'),
