@@ -861,7 +861,7 @@ async def auto_filter(client, msg, spoll=False):
         try:
           a = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
                                       reply_markup=InlineKeyboardMarkup(btn))
-          await asyncio.sleep(300)
+          await asyncio.sleep(60)
           await message.delete()
           await a.delete()
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
