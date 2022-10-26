@@ -864,7 +864,6 @@ async def auto_filter(client, msg, spoll=False):
           a = await message.reply_photo(photo="https://te.legra.ph/file/4bde81bfc6ab8bc34cdba.jpg", caption=cap[:1024],
                                       reply_markup=InlineKeyboardMarkup(btn))
           await asyncio.sleep(40)
-          await message.delete()
           await a.delete()
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
@@ -872,18 +871,15 @@ async def auto_filter(client, msg, spoll=False):
             kl = await message.reply_photo(photo="https://te.legra.ph/file/4bde81bfc6ab8bc34cdba.jpg", caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(40)
             await kl.delete()
-            await message.delete()
         except Exception as e:
             logger.exception(e)
             kll = await message.reply_photo(photo="https://te.legra.ph/file/4bde81bfc6ab8bc34cdba.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(40)
             await kll.delete()
-            await message.delete()
     else:
         klk = await message.reply_photo(photo="https://te.legra.ph/file/4bde81bfc6ab8bc34cdba.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn))
         await asyncio.sleep(40)
         await klk.delete()
-        await message.delete()
     if spoll:
         await message.delete()
 
