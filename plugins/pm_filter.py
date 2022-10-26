@@ -859,7 +859,7 @@ async def auto_filter(client, msg, spoll=False):
         cap = f"Here is what i found for your query {search}"
     if imdb and imdb.get('poster'):
         try:
-          a = await message.reply_photo(photo="https://te.legra.ph/file/7e9d190e9cbeb3ee61bb2.jpg", caption=cap[:1024],
+          a = await message.reply_photo(photo="https://te.legra.ph/file/4bde81bfc6ab8bc34cdba.jpg", caption=cap[:1024],
                                       reply_markup=InlineKeyboardMarkup(btn))
           await asyncio.sleep(40)
           await message.delete()
@@ -867,18 +867,18 @@ async def auto_filter(client, msg, spoll=False):
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
-            kl = await message.reply_photo(photo="https://te.legra.ph/file/7e9d190e9cbeb3ee61bb2.jpg", caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
+            kl = await message.reply_photo(photo="https://te.legra.ph/file/4bde81bfc6ab8bc34cdba.jpg", caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(40)
             await kl.delete()
             await message.delete()
         except Exception as e:
             logger.exception(e)
-            kll = await message.reply_photo(photo="https://te.legra.ph/file/7e9d190e9cbeb3ee61bb2.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+            kll = await message.reply_photo(photo="https://te.legra.ph/file/4bde81bfc6ab8bc34cdba.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(40)
             await kll.delete()
             await message.delete()
     else:
-        klk = await message.reply_photo(photo="https://te.legra.ph/file/7e9d190e9cbeb3ee61bb2.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+        klk = await message.reply_photo(photo="https://te.legra.ph/file/4bde81bfc6ab8bc34cdba.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn))
         await asyncio.sleep(40)
         await klk.delete()
         await message.delete()
