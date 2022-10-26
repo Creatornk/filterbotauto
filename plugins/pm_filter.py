@@ -885,7 +885,7 @@ async def auto_filter(client, msg, spoll=False):
         await klk.delete()
         await message.delete()
     if spoll:
-        await msg.message.delete()
+        await message.delete()
 
 
 async def advantage_spell_chok(msg):
