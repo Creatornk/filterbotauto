@@ -102,8 +102,10 @@ async def give_filter(client,message):
 
                         if btn == "[]":
 
-                            await message.reply_text(reply_text, disable_web_page_preview=True)
-
+                            final_msg=await message.reply_text(reply_text, disable_web_page_preview=True)
+                            
+                            await asyncio.sleep(60)
+                            await final_msg.delete()
                         else:
 
                             button = eval(btn)
@@ -117,6 +119,8 @@ async def give_filter(client,message):
                                 reply_markup=InlineKeyboardMarkup(button)
 
                             )
+                            await asyncio.sleep(60)
+                            await final_msg.delete()
 
                     elif btn == "[]":
 
@@ -127,6 +131,8 @@ async def give_filter(client,message):
                             caption=reply_text or ""
 
                         )
+                        await asyncio.sleep(60)
+                        await final_msg.delete()
 
                     else:
 
@@ -141,6 +147,9 @@ async def give_filter(client,message):
                             reply_markup=InlineKeyboardMarkup(button)
 
                         )
+                        await asyncio.sleep(60)
+
+                        await final_msg.delete()
 
                 except Exception as e:
 
@@ -956,7 +965,9 @@ async def manual_filters(client, message, text=False):
                 try:
                     if fileid == "None":
                         if btn == "[]":
-                            await client.send_message(group_id, reply_text, disable_web_page_preview=True)
+                           msg=await client.send_message(group_id, reply_text, disable_web_page_preview=True)
+                           await asyncio.sleep(60)
+                           await msg.delete()
                         else:
                             button = eval(btn)
                             await client.send_message(
